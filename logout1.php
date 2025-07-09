@@ -1,0 +1,14 @@
+<?php
+session_start();
+?>
+<?php
+if(!isset($_SESSION['adm']))
+{
+  header("location:admin.php");
+}
+else
+{
+    session_destroy();
+    header("location:admin.php");
+}
+?>
